@@ -1,6 +1,6 @@
 FROM debian:stretch-slim
 
-MAINTAINER "adam.deller1@gmail.com"
+MAINTAINER "s.rishat@gmail.com"
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -25,6 +25,7 @@ COPY ./elog-banner-css/css/ /usr/share/elog/themes/default/banner
 
 # elog logbooks
 #RUN chown -R elog:elog /var/lib/elog
+RUN chown -R root:root /var/lib/elog
 
 EXPOSE 8080
 
