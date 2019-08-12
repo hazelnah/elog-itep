@@ -17,7 +17,7 @@ RUN apt-get clean
 # elog config
 RUN mkdir /etc/elog
 COPY ./elog.conf /etc/elog/elog.conf
-RUN chown elog:elog /etc/elog/elog.conf
+#RUN chown elog:elog /etc/elog/elog.conf
 
 # CSS banner themes
 RUN mkdir /usr/share/elog/themes/default/banner
