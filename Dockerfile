@@ -25,7 +25,7 @@ COPY ./elog-banner-css/css/ /usr/share/elog/themes/default/banner
 
 # elog logbooks
 RUN chown -R elog:elog /var/lib/elog
-RUN chmod -R 755 /var/lib/elog
+RUN chmod -R 777 /var/lib/elog
 
 EXPOSE 8080
 
