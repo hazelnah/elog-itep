@@ -23,6 +23,9 @@ RUN chown elog:elog /etc/elog/elog.conf
 RUN mkdir /usr/share/elog/themes/default/banner
 COPY ./elog-banner-css/css/ /usr/share/elog/themes/default/banner
 
+#SSL 
+COPY ./ssl/ /usr/share/elog/ssl/
+
 # elog logbooks
 RUN chown -R elog:elog /var/lib/elog
 RUN chmod -R 777 /var/lib/elog
