@@ -34,4 +34,4 @@ RUN chmod -R 777 /var/lib/elog
 EXPOSE 8080
 
 #USER 751
-CMD ["elogd", "-p", "8080", "-c", "/etc/elog/elog.conf", "-D"]
+CMD ["elogd", "-p", "8080", "-c", "/etc/elog/elog.conf"]
