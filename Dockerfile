@@ -25,7 +25,7 @@ RUN mkdir /usr/share/elog/themes/default/banner
 COPY ./elog-banner-css/css/ /usr/share/elog/themes/default/banner
 
 #SSL 
-COPY ./ssl/ /usr/share/elog/ssl/
+#COPY ./ssl/ /usr/share/elog/ssl/
 #COPY /var/run/secrets/kubernetes.io/ /usr/share/elog/ssl/
 #COPY /var/run/secrets/kubernetes.io/serviceaccount/ /usr/share/elog/ssl/
 
@@ -37,4 +37,4 @@ RUN chmod -R 777 /var/lib/elog
 EXPOSE 8080
 
 #USER 751
-CMD ["elogd", "-p", "8080", "-c", "/etc/elog/elog.conf", "-D"]
+CMD ["elogd", "-p", "8080", "-c", "/etc/elog/elog.conf"]
