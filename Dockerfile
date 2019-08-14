@@ -1,4 +1,4 @@
-F OM debian:stretch-slim
+FROM debian:stretch-slim
 
 MAINTAINER "s.rishat@gmail.com"
 
