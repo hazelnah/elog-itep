@@ -1,4 +1,4 @@
-FROM debian:stretch-slim
+F OM debian:stretch-slim
 
 MAINTAINER "s.rishat@gmail.com"
 
@@ -25,7 +25,7 @@ RUN mkdir /usr/share/elog/themes/default/banner
 COPY ./elog-banner-css/css/ /usr/share/elog/themes/default/banner
 
 #SSL 
-COPY ./ssl/ /usr/share/elog/ssl/
+#COPY ./ssl/ /usr/share/elog/ssl/
 #COPY /var/run/secrets/kubernetes.io/ /usr/share/elog/ssl/
 #COPY /var/run/secrets/kubernetes.io/serviceaccount/ /usr/share/elog/ssl/
 
