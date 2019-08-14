@@ -37,4 +37,4 @@ RUN chmod -R 777 /var/lib/elog
 EXPOSE 8080
 
 #USER 751
-CMD ["elogd", "-p", "8080", "-c", "/etc/elog/elog.conf", "-n", "https://itepalice.web.cern.ch"]
+CMD ["elogd", "-p", "8080", "-c", "/etc/elog/elog.conf", "-n", "oonodelb.cern.ch"]
