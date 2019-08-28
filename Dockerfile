@@ -23,6 +23,7 @@ RUN chmod 777 /etc/elog/elog.conf
 # CSS banner themes
 RUN mkdir /usr/share/elog/themes/default/banner
 COPY ./elog-banner-css/css/ /usr/share/elog/themes/default/banner
+COPY ./elog-banner-css/css/elog_my.css /usr/share/elog/themes/default/elog.css
 
 #SSL 
 COPY ./ssl/ /usr/share/elog/ssl/
