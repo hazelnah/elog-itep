@@ -381,6 +381,7 @@ td {
   border-left:1px solid white;
   background-color:#DDEEBB;
   text-align:left;
+  font-size: 10pt;
 }
 
 .threadreply {
@@ -397,7 +398,8 @@ td {
   border-left:1px solid white;
   background-color:#DDEEBB;
   text-align:left;
-  font-weight:bold
+  font-weight:bold;
+  font-size: 10pt;
 }
 
 .threadreplyh {
