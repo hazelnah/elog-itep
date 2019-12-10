@@ -24,6 +24,7 @@ RUN chmod 777 /etc/elog/elog.conf
 RUN mkdir /usr/share/elog/themes/default/banner
 COPY ./elog-banner-css/css/ /usr/share/elog/themes/default/banner
 COPY ./elog-banner-css/css/elog_my.css /usr/share/elog/themes/default/elog.css
+COPY ./iteplogo.png /usr/share/elog/themes/default/
 
 #SSL 
 COPY ./ssl/ /usr/share/elog/ssl/
