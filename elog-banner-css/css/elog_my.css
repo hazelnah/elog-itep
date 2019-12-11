@@ -464,7 +464,8 @@ td {
   border-right:1px solid gray;
   border-left:1px solid gray;
   border-bottom:1px solid gray;
-  font-family:'lucida console',courier,monospace;
+/*  font-family:'lucida console',courier,monospace;*/
+  font-family:'verdana',courier,monospace;
   font-size:10pt;
   padding:5px;
 }
@@ -478,7 +479,8 @@ td {
 }
 
 .messagepre {
-  font-family:'lucida console',courier,monospace;
+ /* font-family:'lucida console',courier,monospace;*/
+  font-family:'verdana',courier,monospace;
 }
 
 /* frame around attachments */
@@ -499,7 +501,8 @@ td {
 
 /* attachment size */
 .bytes {
-  font-family:'lucida console',courier,monospace;
+  /*font-family:'lucida console',courier,monospace;*/
+  font-family:'verdana',courier,monospace;
   font-size:10pt;
 }
 
