@@ -509,8 +509,9 @@ td {
   border-top:1px solid white;
   border-left:1px solid white;
   background-color:white;
-  font-family:'lucida console',courier,monospace;
-  font-size:12pt;
+  /*font-family:'lucida console',courier,monospace;*/
+  font-family:'verdana',courier,monospace;
+  font-size:10pt;
 }
 
 /* input forms */
