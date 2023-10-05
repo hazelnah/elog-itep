@@ -5,8 +5,8 @@ MAINTAINER "s.rishat@gmail.com"
 ENV DEBIAN_FRONTEND noninteractive
 
 # imagemagick and elog
-RUN apt-get update \
-    && apt-get --yes install \
+RUN echo "start install packeges"
+RUN apt-get --yes install \
         imagemagick \
         ckeditor \
         elog \
