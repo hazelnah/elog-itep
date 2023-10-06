@@ -6,7 +6,8 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # imagemagick and elog
 RUN echo "start install packeges"
-RUN apt-get --yes install \
+RUN apt-get update \
+    && apt-get --yes install \
         imagemagick \
         ckeditor \
         elog \
