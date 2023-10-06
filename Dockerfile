@@ -1,4 +1,4 @@
-FROM debian:stretch-slim
+FROM ubuntu
 
 MAINTAINER "s.rishat@gmail.com"
 
