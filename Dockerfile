@@ -11,6 +11,7 @@ RUN apt-get update \
         imagemagick \
         ckeditor \
         elog \
+        vim \
     && rm -rf /var/lib/apt/lists/*
 
 RUN apt-get clean
