@@ -29,7 +29,7 @@ COPY ./elog-banner-css/css/elog_my.css /usr/share/elog/themes/default/elog.css
 COPY ./iteplogo.png /usr/share/elog/themes/default/
 
 #SSL 
-#COPY ./ssl/ /usr/share/elog/ssl/
+COPY ./ssl/ /usr/share/elog/ssl/
 #COPY /var/run/secrets/kubernetes.io/ /usr/share/elog/ssl/
 #COPY /var/run/secrets/kubernetes.io/serviceaccount/*crt /usr/share/elog/ssl/
 
