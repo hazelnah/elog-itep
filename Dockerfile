@@ -66,7 +66,10 @@ RUN ls /usr/local/elog
 RUN chgrp -R elog /usr/local/elog && \
     chown -R elog /usr/local/elog && \
     chmod -R g=u /usr/local/elog
-RUN usermod -a -G root elog
+RUN usermod -a -G elog root
+
+RUN cat /etc/group
+RUN cat /etc/passwd
 
 #EXPOSE 8080
 
