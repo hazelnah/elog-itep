@@ -15,6 +15,7 @@ RUN apt-get update \
 #        elog \
         vim \
         git \
+        make \
     && rm -rf /var/lib/apt/lists/*
 
 RUN apt-get clean
