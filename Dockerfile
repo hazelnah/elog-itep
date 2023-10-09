@@ -26,7 +26,7 @@ MAINTAINER "s.rishat@gmail.com"
 COPY ./elog-3.1.4-1.x86_64.rpm /
 RUN ls
 #RUN rpm -i /elog-3.1.5-1.el7.x86_64.rpm
-RUN rpm -i COPY ./elog-3.1.4-1.x86_64.rpm
+RUN rpm -i /elog-3.1.4-1.x86_64.rpm
 #pull & make
 RUN mkdir /etc/elog
 #WORKDIR "/etc/elog"
