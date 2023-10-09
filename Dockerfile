@@ -13,9 +13,10 @@ RUN apt-get update \
 #        imagemagick \
 #        ckeditor \
 #        elog \
+        build-essential \
         vim \
         git \
-        make \
+        #make \
     && rm -rf /var/lib/apt/lists/*
 
 RUN apt-get clean
