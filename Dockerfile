@@ -69,4 +69,4 @@ RUN ls /usr/local/elog
 #CMD ["elogd", "-p", "8080", "-c", "/etc/elog/elog.conf"]
 #RUN systemctl start elogd
 #CMD ["/etc/rc.d/init.d/elogd", "start"]
-CMD ["elogd", "-p", "8080", "-c", "/usr/local/elog/elog.conf"]
+CMD ["elogd", "-p", "8080", "-c", "/usr/local/elog/elogd.cfg"]
