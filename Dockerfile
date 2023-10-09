@@ -63,9 +63,10 @@ RUN ls /usr/local/elog
 #RUN chgrp -R 0 /var/lib/elog && \
 #    chmod -R g=u /var/lib/elog
 
-RUN chgrp -R elog:elog /usr/local/elog && \
+RUN chgrp -R elog /usr/local/elog && \
     chown -R elog /usr/local/elog && \
     chmod -R g=u /usr/local/elog
+RUN usermod -a -G root elog
 
 #EXPOSE 8080
 
