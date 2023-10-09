@@ -22,13 +22,12 @@ RUN apt-get clean
 
 #pull & make
 RUN mkdir /etc/elog
-RUN cd /etc/elog
-RUN git clone https://bitbucket.org/ritt/elog --recursive
+#WORKDIR "/etc/elog"
+RUN git clone https://bitbucket.org/ritt/elog /etc/elog --recursive
 RUN ls
-RUN cd elog
-RUN make
-RUN make install
-RUN cd /
+RUN cd /etc/elog \
+    && make \
+    && make install
 
 
 # elog config
