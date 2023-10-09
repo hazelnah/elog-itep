@@ -22,11 +22,11 @@ MAINTAINER "s.rishat@gmail.com"
 #    && rm -rf /var/lib/apt/lists/*
 
 #RUN apt-get clean
-#COPY ./elog-3.1.5-1.el7.x86_64.rpm /
-COPY ./elog-3.1.4-1.x86_64.rpm /
+COPY ./elog-3.1.5-1.el7.x86_64.rpm /
+#COPY ./elog-3.1.4-1.x86_64.rpm /
 RUN ls
-#RUN rpm -i /elog-3.1.5-1.el7.x86_64.rpm
-RUN rpm -i /elog-3.1.4-1.x86_64.rpm
+RUN rpm -i /elog-3.1.5-1.el7.x86_64.rpm
+#RUN rpm -i /elog-3.1.4-1.x86_64.rpm
 #pull & make
 RUN mkdir /etc/elog
 #WORKDIR "/etc/elog"
@@ -62,6 +62,9 @@ RUN ls /usr/local/elog
 #RUN chmod -R 777 /var/lib/elog
 #RUN chgrp -R 0 /var/lib/elog && \
 #    chmod -R g=u /var/lib/elog
+
+RUN chgrp -R 0 /usr/local/elog && \
+    chmod -R g=u /usr/local/elog
 
 #EXPOSE 8080
 
