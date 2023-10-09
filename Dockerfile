@@ -42,6 +42,7 @@ RUN ls /usr/local/elog
 #COPY ./elog.conf /etc/elog/elog.conf
 #RUN chown elog:elog /etc/elog/elog.conf
 #RUN chmod 777 /etc/elog/elog.conf
+COPY ./elog.conf /usr/local/elog/elog.conf
 
 # CSS banner themes
 #RUN mkdir /usr/local/elog/themes/default/banner
@@ -77,4 +78,4 @@ RUN cat /etc/passwd
 #CMD ["elogd", "-p", "8080", "-c", "/etc/elog/elog.conf"]
 #RUN systemctl start elogd
 #CMD ["/etc/rc.d/init.d/elogd", "start"]
-CMD ["elogd", "-p", "8080", "-c", "/usr/local/elog/elogd.cfg"]
+CMD ["elogd", "-p", "8080", "-c", "/usr/local/elog/elog.conf", "-d", "/var/lib/elog/logbooks/"]
