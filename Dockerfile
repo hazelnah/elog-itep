@@ -14,6 +14,7 @@ RUN apt-get update \
 #        ckeditor \
 #        elog \
         build-essential \
+        openssl \
         vim \
         git \
         #make \
