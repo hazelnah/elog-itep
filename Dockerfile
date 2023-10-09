@@ -59,7 +59,7 @@ RUN ls /usr/local/elog
 
 # elog logbooks
 #RUN chown -R elog:elog /var/lib/elog
-#RUN chmod -R 777 /var/lib/elog
+RUN chmod -R 777 /var/lib/elog
 #RUN chgrp -R 0 /var/lib/elog && \
 #    chmod -R g=u /var/lib/elog
 
