@@ -59,8 +59,9 @@ COPY ./elog.conf /usr/local/elog/elog.conf
 
 
 # elog logbooks
+RUN ls /var/lib/
 #RUN chown -R elog:elog /var/lib/elog
-RUN chmod -R 777 /var/lib/elog
+#RUN chmod -R 777 /var/lib/elog
 #RUN chgrp -R 0 /var/lib/elog && \
 #    chmod -R g=u /var/lib/elog
 
