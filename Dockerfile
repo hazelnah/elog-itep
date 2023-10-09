@@ -22,15 +22,16 @@ MAINTAINER "s.rishat@gmail.com"
 #    && rm -rf /var/lib/apt/lists/*
 
 #RUN apt-get clean
-COPY ./elog-3.1.5-1.el7.x86_64.rpm /
+#COPY ./elog-3.1.5-1.el7.x86_64.rpm /
+COPY ./elog-3.1.4-1.x86_64.rpm /
 RUN ls
-RUN rpm -i /elog-3.1.5-1.el7.x86_64.rpm
-
+#RUN rpm -i /elog-3.1.5-1.el7.x86_64.rpm
+RUN rpm -i COPY ./elog-3.1.4-1.x86_64.rpm
 #pull & make
 RUN mkdir /etc/elog
 #WORKDIR "/etc/elog"
 #RUN git clone https://bitbucket.org/ritt/elog /etc/elog --recursive
-RUN ls
+RUN ls /usr/local/elog 
 #RUN cd /etc/elog \
 #    && make \
 #    && make install
