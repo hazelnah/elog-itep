@@ -22,7 +22,7 @@ MAINTAINER "s.rishat@gmail.com"
 #    && rm -rf /var/lib/apt/lists/*
 
 #RUN apt-get clean
-
+RUN ls
 RUN rpm -i elog-3.1.5-1.el7.x86_64.rpm
 
 #pull & make
