@@ -14,7 +14,8 @@ RUN apt-get update \
 #        ckeditor \
 #        elog \
         build-essential \
-        openssl \
+        libssl1.1 libssl-devel opendlap-devel libopenldap2 libkrb5-devel libkrb5_3
+#        openssl \
         vim \
         git \
         #make \
