@@ -3,34 +3,47 @@ FROM ubuntu
 MAINTAINER "s.rishat@gmail.com"
 
 ENV DEBIAN_FRONTEND noninteractive
+#ENV instalDir /usr/local/elog/
+#ENV instalDir /usr/share/elog/
 
 # imagemagick and elog
-RUN echo "start install packeges"
+RUN pwd
 RUN apt-get update \
     && apt-get --yes install \
-        imagemagick \
-        ckeditor \
-        elog \
+#        imagemagick \
+#        ckeditor \
+#        elog \
         vim \
+        git \
     && rm -rf /var/lib/apt/lists/*
 
 RUN apt-get clean
 
-# elog config
+#pull & make
 RUN mkdir /etc/elog
+RUN cd /etc/elog
+RUN git clone https://bitbucket.org/ritt/elog --recursive
+RUN make
+RUN make install
+RUN cd -
+
+
+# elog config
+#RUN mkdir /etc/elog
 COPY ./elog.conf /etc/elog/elog.conf
 RUN chown elog:elog /etc/elog/elog.conf
 RUN chmod 777 /etc/elog/elog.conf
 
 # CSS banner themes
-RUN mkdir /usr/share/elog/themes/default/banner
-COPY ./elog-banner-css/css/ /usr/share/elog/themes/default/banner
-COPY ./elog-banner-css/css/elog_my.css /usr/share/elog/themes/default/elog.css
-COPY ./iteplogo.png /usr/share/elog/themes/default/
+RUN mkdir /usr/local/elog/themes/default/banner
+COPY ./elog-banner-css/css/ /usr/local/elog/themes/default/banner
+COPY ./elog-banner-css/css/elog_my.css /usr/local/elog/themes/default/elog.css
+COPY ./iteplogo.png /usr/local/elog/themes/default/
 
 #SSL 
-COPY ./server.crt /usr/share/elog/ssl/
-COPY ./server.key /usr/share/elog/ssl/
+#COPY ./server.crt /usr/local/elog/ssl/
+#COPY ./server.key /usr/local/elog/ssl/
+#RUN chmod 400 /usr/share/elog/ssl/server.key
 #COPY /var/run/secrets/kubernetes.io/ /usr/share/elog/ssl/
 #COPY /var/run/secrets/kubernetes.io/serviceaccount/*crt /usr/share/elog/ssl/
 
@@ -44,4 +57,5 @@ RUN chgrp -R 0 /var/lib/elog && \
 EXPOSE 8080
 
 #USER 751
-CMD ["elogd", "-p", "8080", "-c", "/etc/elog/elog.conf"]
+#CMD ["elogd", "-p", "8080", "-c", "/etc/elog/elog.conf"]
+RUN systemctl start elogd
