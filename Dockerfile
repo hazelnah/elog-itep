@@ -45,15 +45,15 @@ RUN ls /usr/local/elog
 COPY ./elog.conf /usr/local/elog/elog.conf
 
 # CSS banner themes
-#RUN mkdir /usr/local/elog/themes/default/banner
-#COPY ./elog-banner-css/css/ /usr/local/elog/themes/default/banner
-#COPY ./elog-banner-css/css/elog_my.css /usr/local/elog/themes/default/elog.css
-#COPY ./iteplogo.png /usr/local/elog/themes/default/
+RUN mkdir /usr/local/elog/themes/default/banner
+COPY ./elog-banner-css/css/ /usr/local/elog/themes/default/banner
+COPY ./elog-banner-css/css/elog_my.css /usr/local/elog/themes/default/elog.css
+COPY ./iteplogo.png /usr/local/elog/themes/default/
 
 #SSL 
-#COPY ./server.crt /usr/local/elog/ssl/
-#COPY ./server.key /usr/local/elog/ssl/
-#RUN chmod 400 /usr/share/elog/ssl/server.key
+COPY ./server.crt /usr/local/elog/ssl/
+COPY ./server.key /usr/local/elog/ssl/
+RUN chmod 400 /usr/local/elog/ssl/server.key
 #COPY /var/run/secrets/kubernetes.io/ /usr/share/elog/ssl/
 #COPY /var/run/secrets/kubernetes.io/serviceaccount/*crt /usr/share/elog/ssl/
 
