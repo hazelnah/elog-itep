@@ -53,7 +53,7 @@ COPY ./iteplogo.png /usr/local/elog/themes/default/
 #SSL 
 COPY ./server.crt /usr/local/elog/ssl/
 COPY ./server.key /usr/local/elog/ssl/
-RUN chmod 400 /usr/local/elog/ssl/server.key
+#RUN chmod 400 /usr/local/elog/ssl/server.key
 #COPY /var/run/secrets/kubernetes.io/ /usr/share/elog/ssl/
 #COPY /var/run/secrets/kubernetes.io/serviceaccount/*crt /usr/share/elog/ssl/
 
